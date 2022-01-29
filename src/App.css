@@ -1,3 +1,26 @@
+/* mobile */
+html {
+  font-size: 16px;
+}
+/* tablet */
+@media only screen and (min-width: 480px) {
+  html {
+      font-size: 18px;
+  }
+}
+/* desktop */
+@media only screen and (min-width: 768px) {
+  html {
+      font-size: 20px;
+  }
+}
+/* extra large */
+@media only screen and (min-width: 1024px) {
+  html {
+      font-size: 22px;
+  }
+}
+
 .App {
   text-align: center;
   background-image: linear-gradient(to right, teal, orange);
@@ -26,11 +49,16 @@
   flex-direction: row;
   align-items: center;
   justify-content: left;
+  height: 4rem;
   font-size: 1.3rem;
   color: white;
 }
 
 .App-footer {
+  position: absolute;
+  width: 100vw;
+  top: 85vh;
+  height: 15vh;
   background-color: #47172e4f;
   border-top: solid 1px white;
   display: flex;
@@ -46,18 +74,21 @@
   border-radius: 1rem;
   margin: 1rem;
   padding: 0;
-  width: 100vw;
-  height: 2rem;
+  width: 100vmax;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
 }
 
-.send-button {
+.message-input {
+  background-color: lightgray;
+  border: none;
+}
+.message-button {
   border: solid 1px white;
   border-radius: 50%;
-  margin: 0.5rem;
+  margin: 0.3rem;
 }
 
 @keyframes App-logo-spin {

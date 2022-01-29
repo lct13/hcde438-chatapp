@@ -10,8 +10,8 @@ function App() {
       </header>
       <footer className="App-footer">
         <div className='message-box'>
-          <p></p>
-          <button className='send-button'>^</button>
+          <input className='message-input'></input>
+          <button className='message-button'>&#8593;</button>
         </div>
       </footer>
     </div>
