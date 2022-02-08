@@ -1,14 +1,21 @@
 import logo from './logo.svg';
 import Camera from 'react-snap-pic';
 import './App.css';
+import NamePicker from './NamePicker';
 import TextInput from './TextInput';
 import Message from './Message';
 import { useState } from "react";
 
 function App() {
+  const [name, setName] = useState([]);
   const [messages, setMessages] = useState([]);
   const [showCamera, setShowCamera] = useState([false])
 
+  function pickName(newName) {
+    if (!newName) return;
+
+    setName(newName);
+  }
   // runs when send button is clicked
   function sendMsg(text) {
     if (!text) return;
@@ -16,7 +23,7 @@ function App() {
     const newMessage = {
       text: text,
       time: Date.now(),
-      user: '',
+      name: name,
     }
     // ... -> spread (include all the current items in messages)
     setMessages([...messages, newMessage]);
@@ -30,8 +37,11 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Chatter</p>
+        <div className='App-name'>
+          <img src={logo} className="App-logo" alt="logo" />
+          <p>Chatter</p>
+        </div>
+        <NamePicker pickName={pickName}/>
       </header>
 
       <div className='messages'>

@@ -15,7 +15,7 @@ function TextInput(props) {
   return (
     <footer className="footer">
       <div className='message-box'>
-        <button className="camera"
+        <button className="camera-button"
           onClick={props.showCamera}
           style={{left:10, right:'auto'}}>
           <FiCamera style={{height:15, width:15}} />

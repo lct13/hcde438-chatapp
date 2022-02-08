@@ -38,10 +38,17 @@ html {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: left;
+  justify-content: space-between;
   height: 4rem;
   font-size: 1.5rem;
   color: white;
+}
+
+.App-name {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .App-logo {

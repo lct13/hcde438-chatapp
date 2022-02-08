@@ -25,26 +25,82 @@
   justify-content: space-between;
 }
 
+.camera-button {
+  padding-top: 0.3rem;
+}
+
 .message-input {
   background-color: lightgray;
   border: none;
   width: 80vw;
 }
+
 button {
   border: solid 1px white;
   border-radius: 50%;
   margin: 0.3rem;
+  background-color: rgba(0,0,0,0);
+  color: white;
+  width: 1.7rem;
+  height: 1.7rem;
 }
 
+.message-name {
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.801);
+  text-align: left;
+  margin-left: 1rem;
+}
 .message-bubble {
   color: rgba(128, 128, 128, 0.555);
   box-shadow: 0px 0px 0.5rem red;
   width: fit-content;
   max-width: 85vw;
   overflow-wrap: break-word;
-  margin: 1rem;
-  padding: 0.5rem;
+  margin: 0rem 1rem 1rem 1rem;
   border-radius: 1rem;
   text-align: left;
   mix-blend-mode: difference;
+}
+
+.message-bubble p {
+  padding:0.5rem;
+  border-radius: 1rem;
+  background-color: rgba(243, 240, 240, 0.137);
+  mix-blend-mode: normal;
+}
+
+.name-box {
+  background-color: none;
+  margin: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1rem;
+  font-weight: lighter;
+}
+
+.name-input {
+  background-color: rgba(255, 255, 255, 0);
+  border: solid 1px white;
+  border-radius: 1rem;
+  margin-right: 0.5rem;
+  padding: 0.3rem;
+  padding-right: 0.7rem;
+  text-align: right;
+  color: white;
+  font-size: 0.9rem;
+}
+
+button:hover {
+  background-color: white;
+}
+
+button:focus {
+  border: solid 1px white;
+}
+
+.hide {
+  display: none;
 }
